@@ -147,3 +147,9 @@ Run the applicaiton using Spring Boot Dashboard tools in VSCode/Eclipse.
     --data-urlencode 'password=password' \
     --data-urlencode 'scope=message.read message.write'
     ```
+
+    ## Acknowledgements
+
+    The password grant code is based on the code sample by
+    [cer](https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server/commits?author=cer)
+
