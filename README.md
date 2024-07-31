@@ -153,5 +153,4 @@ Run the applicaiton using Spring Boot Dashboard tools in VSCode/Eclipse.
 
 ## Acknowledgements
 
-    The password grant code is based on the code sample by
-    [cer](https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server) and [gitRepo](https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server)
+The password grant code is based on the code sample by [cer](https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server) and [gitRepo](https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server)
