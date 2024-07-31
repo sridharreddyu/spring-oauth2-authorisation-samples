@@ -10,15 +10,12 @@ This code depends on following modules
 2. spring-boot-starter-oauth2-authorization-server module
 3. mysql
 
-This sample code developed using the tutorials from:
-<https://docs.spring.io/spring-authorization-server/reference/index.html>
-<https://docs.spring.io/spring-authorization-server/reference/guides/how-to-jpa.html>
+This sample code developed using the code samples from:
 
-Sample Codes from:
-<https://github.com/spring-projects/spring-authorization-server/tree/main/samples/demo-authorizationserver>
-
-Granty Type "password" support:
-<https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server>
+1. [Spring Authorization Server Reference](https://docs.spring.io/spring-authorization-server/reference/index.html)
+2. [Spring Authorization Server How to JPA Guide](https://docs.spring.io/spring-authorization-server/reference/guides/how-to-jpa.html)
+3. [Spring Authorization Demo Server](https://github.com/spring-projects/spring-authorization-server/tree/main/samples/demo-authorizationserver)
+4. [Support of Password Grant Type](https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server)
 
 ## Pre-requisites to run this application
 
@@ -30,19 +27,25 @@ Granty Type "password" support:
 ### Create Schema
 
 1. Create Schema of your choice
-2. Update the application.yml with JDBC connection properties as your schema.
+2. Update the application.yml with JDBC connection properties as per your schema and credentials.
 
    ```yml
         datasource:
             type: com.zaxxer.hikari.HikariDataSource
             url: jdbc:mysql://localhost:3306/snb_auth?useUnicode=true&characterEncoding=utf8&useSSL=false&&allowPublicKeyRetrieval=true
             username: root
-            password: Sidhu@4321
+            password: root@4321
     ```
 
 3. Create Tables
 
-    As per the documentation [Spring Auth Server JPA Link]([https://](https://docs.spring.io/spring-authorization-server/reference/guides/how-to-jpa.html)), I created following tables
+    As per the documentation [Spring Authorization Server How to JPA Guide](https://docs.spring.io/spring-authorization-server/reference/guides/how-to-jpa.html), I created following tables
+
+    1. oauth2_authorization
+    2. oauth2_registered_client
+    3. oauth2_authorization_consent
+
+    Execute below SQL commands to create tables.
 
     ```sql
         CREATE TABLE oauth2_authorization (
@@ -148,8 +151,7 @@ Run the applicaiton using Spring Boot Dashboard tools in VSCode/Eclipse.
     --data-urlencode 'scope=message.read message.write'
     ```
 
-    ## Acknowledgements
+## Acknowledgements
 
     The password grant code is based on the code sample by
-    [cer](https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server/commits?author=cer)
-
+    [cer](https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server) and [gitRepo](https://github.com/eventuate-examples/eventuate-examples-spring-authorization-server)
